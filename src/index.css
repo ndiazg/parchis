@@ -49,3 +49,12 @@ ol, ul {
   margin-left: 20px;
 }
 
+
+.the-end {
+  border-color: #aaa transparent;
+  border-style: solid;
+  border-width: 0px 50px 80px 50px;
+  height: 0px;
+  width: 0px;
+  transform: rotate(45deg);
+}
