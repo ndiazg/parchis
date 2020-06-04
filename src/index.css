@@ -1,10 +1,46 @@
-body {
+html, body {
   font: 14px "Century Gothic", Futura, sans-serif;
   margin: 20px;
+  height: 100%;
+}
+
+.game-top {
+  transform: rotate(180deg);
+  float: left;
+  margin-top: -5vh;
+}
+.game-bottom {
+  margin: 44vh 0 0 -80vh;
+}
+.game-board {
+  height: 50vh;
+  width: 100%;
+}
+
+.game-board > div {
+  height: 50vh;
+  width: 50vh;
+  position: relative;
+  float: left;
 }
 
 ol, ul {
   padding-left: 30px;
+}
+
+.sub-left, .sub-right {
+  height: 100%;
+  width: 50%;
+  float: left;
+}
+.sub-right {
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.board-row {
+  height: 8%;
 }
 
 .board-row:after {
@@ -24,12 +60,15 @@ ol, ul {
   font-size: 24px;
   font-weight: bold;
   line-height: 34px;
-  height: 34px;
+  height: 100%;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 32%;
+}
+.square:nth-child(2) {
+  width: 36%;
 }
 
 .square:focus {
@@ -49,12 +88,78 @@ ol, ul {
   margin-left: 20px;
 }
 
-
 .the-end {
-  border-color: #aaa transparent;
   border-style: solid;
-  border-width: 0px 50px 80px 50px;
+  border-width: 0px 10.1vh 18vh 10.1vh;
   height: 0px;
   width: 0px;
-  transform: rotate(45deg);
+  margin: 0 2vh;
+}
+.jail {
+  border-style: solid;
+  border-width: 0px 14.5vh 25vh 14.5vh;
+  height: 0px;
+  width: 0px;
+  margin: -6vh 0 -0 -9vh;
+  transform: rotate(-30deg);
+}
+.xxxjail {
+  border-style: solid;
+  border-width: 0px 12.5vh 25vh 12.5vh;
+  height: 0px;
+  width: 0px;
+  margin: -4vh 0 -0 -7.5vh;
+  transform: rotate(-26.5deg);
+}
+.player1 {
+  transform: rotate(60deg);
+  margin: -1vh -22vh 0 0;
+}
+.player1 .the-end, .player1 .jail {
+  border-color: #48a042 transparent;
+}
+.player1 .square:nth-child(2), .player1 .board-row:nth-child(5) .square:nth-child(3) {
+  background: #48a042;
+}
+.player2 .the-end, .player2 .jail {
+  border-color: #d01f1f transparent;
+}
+.player2 .square:nth-child(2), .player2 .board-row:nth-child(5) .square:nth-child(3) {
+  background: #d01f1f;
+}
+.player3 {
+  transform: rotate(-60deg);
+  margin: -23.3vh 0 0 -35vh;
+}
+.player3 .the-end, .player3 .jail {
+  border-color: #273e7c transparent;
+}
+.player3 .square:nth-child(2), .player3 .board-row:nth-child(5) .square:nth-child(3) {
+  background: #273e7c;
+}
+.player4 {
+  transform: rotate(60deg);
+  margin: -1vh -22vh 0 0;
+}
+.player4 .the-end, .player4 .jail {
+  border-color: #f7ff77 transparent;
+}
+.player4 .square:nth-child(2), .player4 .board-row:nth-child(5) .square:nth-child(3) {
+  background: #f7ff77;
+}
+.player5 .the-end, .player5 .jail {
+  border-color: #ff9005 transparent;
+}
+.player5 .square:nth-child(2), .player5 .board-row:nth-child(5) .square:nth-child(3) {
+  background: #ff9005;
+}
+.player6 {
+  transform: rotate(-60deg);
+  margin: -23.3vh 0 0 -35vh;
+}
+.player6 .the-end, .player6 .jail {
+  border-color: #b35b88 transparent;
+}
+.player6 .square:nth-child(2), .player6 .board-row:nth-child(5) .square:nth-child(3) {
+  background: #b35b88;
 }

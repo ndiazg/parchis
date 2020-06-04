@@ -25,9 +25,10 @@ class Board extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className="sub-section">
-          <div className="the-end">End</div>
+      <div class={this.props.bg}>
+        <div className="sub-left">
+          <div className="the-end"></div>
+          {this.subSection(0)}
           {this.subSection(0)}
           {this.subSection(0)}
           {this.subSection(0)}
@@ -36,7 +37,9 @@ class Board extends React.Component {
           {this.subSection(0)}
           {this.subSection(0)}
         </div>
-        <div className="jail">Jail</div>
+        <div className="sub-right">
+          <div className="jail"></div>
+        </div>
       </div>
     );
   }
@@ -46,12 +49,15 @@ class Game extends React.Component {
   render() {
     return (
       <div className="game">
-        <div className="game-board">
-          <Board />
+        <div className="game-board game-top">
+          <Board bg="player1"/>
+          <Board bg="player2"/>
+          <Board bg="player3"/>
         </div>
-        <div className="game-info">
-          <div>{/* status */}</div>
-          <ol>{/* TODO */}</ol>
+        <div className="game-board game-bottom">
+          <Board bg="player4"/>
+          <Board bg="player5"/>
+          <Board bg="player6"/>
         </div>
       </div>
     );
