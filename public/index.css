@@ -1,0 +1,182 @@
+html, body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+  height: 100%;
+}
+.game {
+  width: 100vh;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  border: solid 1px #bbb;
+}
+.game-board {
+  height: 50%;
+  width: 100%;
+  position: relative;
+}
+.game-top {
+  transform: rotate(180deg);
+}
+
+.game-board > div {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+}
+
+ol, ul {
+  padding-left: 30px;
+}
+
+.sub-left, .sub-right {
+  height: 100%;
+  width: 50%;
+  float: left;
+}
+.sub-right {
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.board-row {
+  height: 8%;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 100%;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 32%;
+}
+.square:nth-child(2) {
+  width: 36%;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+.the-end {
+  border-style: solid;
+  border-width: 0px 10.1vh 18vh 10.1vh;
+  height: 0px;
+  width: 0px;
+  margin: 0 2vh;
+}
+.jail {
+  border-style: solid;
+  border-width: 0px 14.5vh 25vh 14.5vh;
+  height: 0px;
+  width: 0px;
+  margin: -6vh 0 -0 -9vh;
+  transform: rotate(-30deg);
+}
+.game-board > div:nth-child(1) {
+  transform: rotate(60deg);
+  left: 10.5%;
+  top:-3%;
+}
+.game-board > div:nth-child(2) {
+  left: 38%;
+  top: -1%;
+}
+.game-board > div:nth-child(3) {
+  transform: rotate(-60deg);
+  left: 52.5%;
+  top: -48%;
+}
+.player1 .the-end, .player1 .jail {
+  border-color: #48a042 transparent;
+}
+.player1 .square:nth-child(2), .player1 .board-row:nth-child(5) .square:nth-child(3) {
+  background: #48a042;
+}
+.player2 .the-end, .player2 .jail {
+  border-color: #d01f1f transparent;
+}
+.player2 .square:nth-child(2), .player2 .board-row:nth-child(5) .square:nth-child(3) {
+  background: #d01f1f;
+}
+.player3 .the-end, .player3 .jail {
+  border-color: #273e7c transparent;
+}
+.player3 .square:nth-child(2), .player3 .board-row:nth-child(5) .square:nth-child(3) {
+  background: #273e7c;
+}
+.player4 .the-end, .player4 .jail {
+  border-color: #f7ff77 transparent;
+}
+.player4 .square:nth-child(2), .player4 .board-row:nth-child(5) .square:nth-child(3) {
+  background: #f7ff77;
+}
+.player5 .the-end, .player5 .jail {
+  border-color: #ff9005 transparent;
+}
+.player5 .square:nth-child(2), .player5 .board-row:nth-child(5) .square:nth-child(3) {
+  background: #ff9005;
+}
+.player6 .the-end, .player6 .jail {
+  border-color: #b35b88 transparent;
+}
+.player6 .square:nth-child(2), .player6 .board-row:nth-child(5) .square:nth-child(3) {
+  background: #b35b88;
+}
+div.p {
+  height: 5vh;
+  width: 5vh;
+  border-radius: 50%;
+  position: absolute !important;
+  border: solid 2px #000;
+}
+div.p1 {
+  background: #48a042;
+  border-color: green;
+}
+div.p2 {
+  background: #d01f1f;
+  border-color: green;
+}
+div.p3 {
+  background: #273e7c;
+  border-color: green;
+}
+div.p4 {
+  background: #f7ff77;
+  border-color: green;
+}
+div.p5 {
+  background: #ff9005;
+  border-color: green;
+}
+div.p6 {
+  background: #b35b88;
+  border-color: green;
+}

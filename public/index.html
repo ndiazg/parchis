@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" href="/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#000000">
+        <meta name="description" content="Parchis">
+        <link rel="manifest" href="/manifest.json">
+        <title>Parchis</title>
+          <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+          <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+          <script src="index.js"></script>
+          <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root">
+            <div class="frame"></div>
+            <div class="game">
+                <div class="game-board game-top">
+                    <div class="player1">
+                        <div class="sub-left">
+                            <div class="the-end"></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                        </div>
+                        <div class="sub-right">
+                            <div class="jail"></div>
+                        </div>
+                    </div>
+                    <div class="player2">
+                        <div class="sub-left">
+                            <div class="the-end"></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                        </div>
+                        <div class="sub-right">
+                            <div class="jail"></div>
+                        </div>
+                    </div>
+                    <div class="player3">
+                        <div class="sub-left">
+                            <div class="the-end"></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                        </div>
+                        <div class="sub-right">
+                            <div class="jail"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-board game-bottom">
+                    <div class="player4">
+                        <div class="sub-left">
+                            <div class="the-end"></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                        </div>
+                        <div class="sub-right">
+                            <div class="jail"></div>
+                        </div>
+                    </div>
+                    <div class="player5">
+                        <div class="sub-left">
+                            <div class="the-end"></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                        </div>
+                        <div class="sub-right">
+                            <div class="jail"></div>
+                        </div>
+                    </div>
+                    <div class="player6">
+                        <div class="sub-left">
+                            <div class="the-end"></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                            <div class="board-row"><button class="square"></button><button class="square"></button><button class="square"></button></div>
+                        </div>
+                        <div class="sub-right">
+                            <div class="jail"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p p1" id="p11"></div><div class="p p1" id="p12"></div><div class="p p1" id="p13"></div><div class="p p1" id="p14"></div>
+                <div class="p p2" id="p21"></div><div class="p p2" id="p22"></div><div class="p p2" id="p23"></div><div class="p p2" id="p24"></div>
+                <div class="p p3" id="p31"></div><div class="p p3" id="p32"></div><div class="p p3" id="p33"></div><div class="p p3" id="p34"></div>
+                <div class="p p4" id="p41"></div><div class="p p4" id="p42"></div><div class="p p4" id="p43"></div><div class="p p4" id="p44"></div>
+                <div class="p p5" id="p51"></div><div class="p p5" id="p52"></div><div class="p p5" id="p53"></div><div class="p p5" id="p54"></div>
+                <div class="p p6" id="p61"></div><div class="p p6" id="p62"></div><div class="p p6" id="p63"></div><div class="p p6" id="p64"></div>
+                <input type="button" id="reset" value="Reset">
+            </div>
+        </div>
+    </body>
+</html>
