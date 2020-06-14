@@ -26,7 +26,17 @@ function handler (req, res) {
 io.sockets.on('connection', function (socket) {
   socket.emit('update_position', lastPosition);
   socket.on('receive_position', function (data) {
-     lastPosition[data.id] = data;
-     socket.broadcast.emit('update_position', lastPosition); // send `data` to all other clients
+    lastPosition[data.id] = data;
+    socket.broadcast.emit('update_position', lastPosition); // send `data` to all other clients
+  });
+  socket.on('roll', function () {
+    io.sockets.emit('start_rolling',{});
+  });
+  socket.on('stop_rolling', function () {
+    var dice = {
+      d1: Math.floor(Math.random() * (6)) + 1,
+      d2: Math.floor(Math.random() * (6)) + 1
+    };
+    io.sockets.emit('stop_rolling',dice);
   });
 });
