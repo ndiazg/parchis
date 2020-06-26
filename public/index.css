@@ -111,6 +111,9 @@ ol, ul {
   left: 52.5%;
   top: -48%;
 }
+.board-row:nth-child(5) .square:nth-child(1) {
+  background: #cac;
+}
 .player1 .the-end, .player1 .jail {
   border-color: #48a042 transparent;
 }
