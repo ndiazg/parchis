@@ -20,7 +20,7 @@ $(document).ready(function () {
     $('#d1').addClass('dice-' + data.d1);
     $('#d2').addClass('dice-' + data.d2);
   })
-  $('#roll').click(function(){
+  $('#rollo').click(function(){
     socket.emit('roll',{});
     setTimeout(function(){socket.emit('stop_rolling',{});},1000);
   });

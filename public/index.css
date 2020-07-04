@@ -112,7 +112,7 @@ ol, ul {
   top: -48%;
 }
 .board-row:nth-child(5) .square:nth-child(1) {
-  background: #cac;
+  background: #acccff;
 }
 .player1 .the-end, .player1 .jail {
   border-color: #48a042 transparent;
@@ -187,13 +187,11 @@ header {
 }
 /**********************/
 .button {
-  float: right;
-  margin: 1vh 0;
-  padding: .6vh .2vh;
+  display: inline-block;
+  padding: .6vh 2vh;
   text-align: center;
   vertical-align: middle;
   background: #f76939;
-  width: 40%;
   height: 6vh;
   font-size: 3vh;
   color: #fff;
@@ -203,7 +201,18 @@ header {
     background: #f76939 - 20;
   }
 }
+.button-float {
+  float: right;
+  margin: 1vh 0;
+  width: 40%;
+}
 
+#dicediv {
+  position:absolute; 
+  top: 45vh; 
+  left: 42%; 
+  font-size: 6vh;
+}
 /*
  * Dice.css v1.0
  * Code - MIT License - https://github.com/diafygi/dice-css
